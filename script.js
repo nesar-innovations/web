@@ -2,6 +2,12 @@ function openWebsite() {
     const urlInput = document.getElementById('inurl');
     let url = urlInput.value.trim();
     if (!url) return;
+    try {
+        new URL(url);
+    } catch(e) {
+        let gs = url.replaceAll(' ','+')
+        window.open('https://www.google.com/search?q='+gs)
+    }
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
         if (!url.startsWith('www.')) {
             url = 'https://www.' + url;
