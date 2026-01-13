@@ -12,10 +12,12 @@ body{
     font-family: arial,sans-serif;
 }
 #navbar{
+    display: flex;
     padding: 6px;
+    justify-content: space-between;
 }
-#nmail{
-    margin-left: 85%;
+#left-side-nav{
+    width: 150px;
 }
 #profile-image{
     height: 40px;
@@ -41,20 +43,22 @@ body{
     width: 40%;
     border-radius: 20px;
     min-height: 30px;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 #inurl{
     margin-left: 20px;
     background-color: rgba(0,0,0,0);
     border: none;
-    color:#f5f5f5;
+    color:#f5f5f5;
     outline: none;
     border: none;
-    margin-top: 5px;
+    min-width: 30%;
+    max-width: fit-content;
 }
 #search-button{
     color: white;
     text-decoration: none;
+    margin-right: 10px;
 }
 #searchbox{
     margin-top: 20px;
