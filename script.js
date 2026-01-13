@@ -2,11 +2,25 @@ function openWebsite() {
     const urlInput = document.getElementById('inurl');
     let url = urlInput.value.trim();
     if (!url) return;
+    const isUrl = url.startsWith('http://') || url.startsWith('https://') || /\w+\.\w{2,}/.test(url);
+    
+    if (!isUrl) {
+        let gs = url.replaceAll(' ','+')
+        window.open('https://www.google.com/search?q='+gs)
+        return;
+    }
+    
     try {
-        new URL(url);
+        if((!url.startsWith('http://') && !url.startsWith('https://'))){
+            new URL('https://'+url);
+        }
+        else{
+            new URL(url)
+        }
     } catch(e) {
         let gs = url.replaceAll(' ','+')
         window.open('https://www.google.com/search?q='+gs)
+        return;
     }
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
         if (!url.startsWith('www.')) {
