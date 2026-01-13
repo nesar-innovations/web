@@ -35,18 +35,19 @@ body{
     margin-top: 20px;
 }
 #searchbox{
+    display: flex;
     padding-top: 5px;
     background-color: rgb(77, 81, 86);
     width: 40%;
     border-radius: 20px;
     min-height: 30px;
+    justify-content:space-between;
 }
 #inurl{
     margin-left: 20px;
     background-color: rgba(0,0,0,0);
     border: none;
-    color:#f5f5f5;
-    width:85%;
+    color:#f5f5f5;
     outline: none;
     border: none;
     margin-top: 5px;
