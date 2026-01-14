@@ -2,6 +2,9 @@ function openWebsite() {
     const urlInput = document.getElementById('inurl');
     let url = urlInput.value.trim();
     if (!url) return;
+    if (url==='Gugu gaga ka pita ji'){
+        window.open('secret.html')
+    }
     const isUrl = url.startsWith('http://') || url.startsWith('https://') || /\w+\.\w{2,}/.test(url);
     
     if (!isUrl) {
